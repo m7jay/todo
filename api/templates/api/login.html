@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="", method="POST">
+    <form action="" method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Submit">
     </form>
-    <br>
-    <a href={% url 'todo-list' %}>back</a>
+
+    <p>New User? <a href={% url 'register' %}>register</a></p>
 </body>
 </html>

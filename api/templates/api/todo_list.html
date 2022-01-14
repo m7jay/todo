@@ -7,8 +7,22 @@
     <title>Document</title>
   </head>
   <body>
+    {% if request.user.is_authenticated %}
+      <p>{{request.user}}</p>
+      <a href={% url 'logout' %}>logout</a>
+    {% else %}
+      <a href={% url 'login' %}>login</a>
+    {% endif %}
+
+    <hr>
+
     <h2>My Todos</h2>
     <a href={% url 'todo-create' %}>Add</a>
+
+    <form method="GET">
+      <input type="text" name="search-area" value={{search_input}}>
+      <input type="submit" value="Search">
+    </form>
 
     <table>
       <tr>
@@ -19,7 +33,7 @@
       {% for todo in todo_list%}
       <tr>
         <td>
-          {{todo}}
+    {{todo}}
         </td>
         <td>
           <a href={% url 'todo-detail' todo.id %}>
