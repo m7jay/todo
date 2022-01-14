@@ -1,0 +1,14 @@
+asgiref==3.4.1
+autopep8==1.6.0
+betterpath==0.2.2
+click==8.0.3
+Django==3.2.9
+django-environ==0.8.1
+l==0.11.0
+Pillow==8.4.0
+pycodestyle==2.8.0
+pytz==2021.3
+sqlparse==0.4.2
+toml==0.10.2
+vcversioner==2.16.0.0
+zope.interface==5.4.0
